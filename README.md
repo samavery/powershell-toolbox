@@ -12,7 +12,7 @@ Recursively scans a target directory for Microsoft PowerPoint (.pptx) files and 
 
 - **Node.js** (v18+)
 - **7-Zip** installed in standard system paths (C:\Program Files\7-Zip)
-- PowerPoint Compressor package installed locally at C:\Users\*userID*\github\powerpoint-compressor
+- PowerPoint Compressor package installed locally at $env:USERPROFILE\github\powerpoint-compressor
 
 #### Usage
 
@@ -21,11 +21,12 @@ Recursively scans a target directory for Microsoft PowerPoint (.pptx) files and 
 .\Optimize-PowerPoint.ps1
 
 # Run against a specific directory
-.\Optimize-PowerPoint.ps1 -Path "C:\Users\*userID*\Documents"
+.\Optimize-PowerPoint.ps1 -Path "$env:USERPROFILE\Documents"
 
 # Run and strip embedded video streams
-.\Optimize-PowerPoint.ps1 -Path "C:\Users\*userID*\Desktop" -RemoveVideos
+.\Optimize-PowerPoint.ps1 -Path "$env:USERPROFILE\Desktop" -RemoveVideos
 \\\
+
 
 ## License
 
